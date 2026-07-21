@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Font Playground | استایل متن خودت را بساز</title>
+
+    <meta name="description" content="تبدیل متن به صدها استایل جذاب برای بیو، کپشن و پروفایل">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <header class="navbar">
+        <div class="logo">
+            <span>F</span> Font Playground
+        </div>
+
+        <nav>
+            <a href="#generator">تبدیل متن</a>
+            <a href="#styles">استایل‌ها</a>
+            <a href="#about">درباره ما</a>
+        </nav>
+
+        <button id="themeButton" class="theme-button">☀️</button>
+    </header>
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-badge">
+                ✨ استایل جدید برای متن تو
+            </div>
+
+            <h1>
+                متن معمولی؟
+                <span>نه دیگه.</span>
+            </h1>
+
+            <p>
+                متن خودت را بنویس و آن را به صدها استایل خاص، فانتزی و جذاب تبدیل کن.
+            </p>
+
+            <a href="#generator" class="hero-button">
+                شروع کنیم 🚀
+            </a>
+
+        </section>
+
+        <section id="generator" class="generator-section">
+
+            <div class="section-title">
+                <span>01</span>
+                <h2>متنت را وارد کن</h2>
+            </div>
+
+            <textarea
+                id="textInput"
+                placeholder="اینجا متن خودت را بنویس..."
+            >Joseph Kaka</textarea>
+
+            <div class="generator-info">
+                <span>✨ پیش‌نمایش زنده</span>
+                <span id="characterCount">0 کاراکتر</span>
+            </div>
+
+        </section>
+
+        <section id="styles" class="styles-section">
+
+            <div class="section-title">
+                <span>02</span>
+                <h2>استایل خودت را انتخاب کن</h2>
+            </div>
+
+            <div class="filter-buttons">
+                <button class="filter active" data-filter="all">همه</button>
+                <button class="filter" data-filter="fancy">فانتزی</button>
+                <button class="filter" data-filter="gaming">گیمینگ</button>
+                <button class="filter" data-filter="simple">ساده</button>
+            </div>
+
+            <div id="stylesContainer" class="styles-container"></div>
+
+        </section>
+
+        <section id="about" class="about-section">
+
+            <div class="about-card">
+                <div class="about-icon">✦</div>
+
+                <h2>Font Playground چیست؟</h2>
+
+                <p>
+                    یک ابزار خلاقانه برای ساخت، کشف و استفاده از استایل‌های جذاب متنی.
+                    متن خودت را بنویس، استایل مورد علاقه‌ات را پیدا کن و با یک کلیک کپی کن.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Font Playground — Made with creativity ✨</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
