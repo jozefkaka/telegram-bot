@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --background: #07070c;
+    --surface: rgba(255, 255, 255, 0.06);
+    --surface-hover: rgba(255, 255, 255, 0.1);
+    --border: rgba(255, 255, 255, 0.12);
+    --text: #ffffff;
+    --muted: #a4a4b5;
+    --accent: #9b5cff;
+    --accent-two: #00d4ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--background);
+    color: var(--text);
+    font-family: "Vazirmatn", sans-serif;
+    overflow-x: hidden;
+}
+
+.background-glow {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.18;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.glow-one {
+    background: #8b5cf6;
+    top: -150px;
+    right: -100px;
+}
+
+.glow-two {
+    background: #00d4ff;
+    bottom: -150px;
+    left: -100px;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 24px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    direction: ltr;
+}
+
+.logo span {
+    display: inline-flex;
+    width: 34px;
+    height: 34px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #9b5cff, #00d4ff);
+    margin-right: 8px;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.theme-button {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: white;
+    padding: 10px 13px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.hero {
+    max-width: 900px;
+    margin: 100px auto 80px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 10px 18px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    border-radius: 50px;
+    color: #d7c5ff;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 8vw, 90px);
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -3px;
+}
+
+.hero h1 span {
+    display: block;
+    background: linear-gradient(90deg, #9b5cff, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 25px auto;
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 2;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #9b5cff, #6545d8);
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+    box-shadow: 0 15px 40px rgba(155, 92, 255, 0.25);
+}
+
+.hero-button:hover {
+    transform: translateY(-4px);
+}
+
+.generator-section,
+.styles-section,
+.about-section {
+    max-width: 1100px;
+    margin: 0 auto 100px;
+    padding: 0 20px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.section-title span {
+    color: #9b5cff;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.section-title h2 {
+    font-size: 26px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 160px;
+    resize: vertical;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--surface);
+    color: white;
+    padding: 25px;
+    font-size: 24px;
+    font-family: inherit;
+    outline: none;
+    transition: 0.3s;
+}
+
+textarea:focus {
+    border-color: #9b5cff;
+    box-shadow: 0 0 30px rgba(155, 92, 255, 0.12);
+}
+
+.generator-info {
+    display: flex;
+    justify-content: space-between;
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.filter {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--muted);
+    padding: 10px 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.filter.active,
+.filter:hover {
+    background: #9b5cff;
+    color: white;
+}
+
+.styles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+}
+
+.style-card {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    border-radius: 20px;
+    padding: 22px;
+    transition: 0.3s;
+}
+
+.style-card:hover {
+    transform: translateY(-5px);
+    background: var(--surface-hover);
+    border-color: rgba(155, 92, 255, 0.5);
+}
+
+.style-name {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.style-preview {
+    min-height: 55px;
+    font-size: 24px;
+    word-break: break-word;
+    direction: ltr;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.copy-button {
+    width: 100%;
+    border: 1px solid var(--border);
+    background: rgba(155, 92, 255, 0.15);
+    color: white;
+    padding: 11px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.copy-button:hover {
+    background: #9b5cff;
+}
+
+.about-card {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    border-radius: 25px;
+    padding: 45px;
+    text-align: center;
+}
+
+.about-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.about-card h2 {
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    color: var(--muted);
+    line-height: 2;
+    max-width: 650px;
+    margin: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 35px 20px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        margin-top: 60px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .about-card {
+        padding: 30px 20px;
+    }
+}
